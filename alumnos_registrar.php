@@ -1,4 +1,12 @@
-<?php require_once("header.php"); ?>
+<?php require_once("header.php"); 
+require_once("funciones.php");
+
+$xc = conectar();
+$sql = "SELECT * FROM tipopersona";
+$res = mysqli_query($xc,$sql);
+desconectar($xc);
+
+?>
  <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -13,7 +21,8 @@
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
-            <form role="form">
+            <form role="form" method="POST" action="alumnos_grabar.php">
+                <input hidden="YES" name="accion" value="crear">
                 <fieldset class="form-group">
                     <label for="nom_per">Nombre:</label>
                     <input class="form-control" placeholder="Escriba su Nombre:" required="required" name="nom_per" id="nom_per">
@@ -63,6 +72,20 @@
                     <label for="pass_per">Contraseña:</label>
                     <input type="password" class="form-control" placeholder="Cree una contraseña para acceder al sistema" required="required" name="pass_per" id="pass_per" maxlength="100">
                 </fieldset>
+
+                <fieldset class="form-group">
+                        <label>Tipo de Usuario</label>
+                        <select class="form-control" name="id_tipo_per">
+                            <?php
+                                while($fila=mysqli_fetch_array($res)){
+                                    $xid_tipo_per = $fila["id_tipo_per"];
+                                    $xdesc_tipo_per = $fila["desc_tipo_per"];
+                                    echo "<option value='$xid_tipo_per'>$xdesc_tipo_per</option>";
+                                } 
+                             ?>
+                        </select>
+                </fieldset>
+
                 <button type="submit" class="btn btn-secondary">Submit Button</button>
                 <button type="reset" class="btn btn-secondary">Reset Button</button>
             </form>
