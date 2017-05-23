@@ -83,7 +83,7 @@ $fila = mysqli_fetch_array($res);
                 </fieldset>
                 <fieldset class="form-group">
                     <label for="dir_per">Dirección:</label>
-                    <input class="form-control" placeholder="Escriba su Dirección" required="required" name="dir_per" id="dir_per" value=<?php echo $fila['dir_per']; ?> maxlength="100">
+                    <input class="form-control" placeholder="Escriba su Dirección" required="required" name="dir_per" id="dir_per" value="<?php echo $fila['dir_per']; ?>" maxlength="100">
                 </fieldset>
                 <fieldset class="form-group">
                     <label for="log_per">Usuario:</label>

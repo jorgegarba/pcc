@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>SMTecsup</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@
                     <button class="navbar-toggler hidden-sm-up pull-sm-right" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                         &#9776;
                     </button>
-                    <a class="navbar-brand" href="index.html">SB Admin 4</a>
+                    <a class="navbar-brand" href="index.html">Tecsup</a>
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-nav top-nav navbar-right pull-xs-right">
@@ -150,40 +150,29 @@
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-toggleable-sm navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav list-group">
+                        
                         <li class="list-group-item">
-                            <a href="alumnos.php"><i class="fa fa-fw fa-dashboard"></i> Alumnos</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul id="demo" class="list-group collapse">
+                            <a href="javascript:;" data-toggle="collapse" data-target="#Mantenimientos"><i class="fa fa-fw fa-arrows-v"></i> Mantenimientos <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="Mantenimientos" class="list-group collapse">
                                 <li class="list-group-item">
-                                    <a href="javascript:;">Dropdown Item</a>
+                                    <a href="alumnos.php">Alumnos</a>
                                 </li>
                                 <li class="list-group-item">
                                     <a href="javascript:;">Dropdown Item</a>
                                 </li>
                             </ul>
                         </li>
+
                         <li class="list-group-item">
-                            <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#Operaciones"><i class="fa fa-fw fa-arrows-v"></i> Operaciones <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="Operaciones" class="list-group collapse">
+                                <li class="list-group-item">
+                                    <a href="alumnos.php">Matriculas</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">Dropdown Item</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

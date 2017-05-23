@@ -51,7 +51,7 @@ desconectar($xc);
                                 echo "<td>$xnomape</td>";
                                 echo "<td>$xemail_per</td>";
                                 echo "<td>$xlog_per</td>";
-                                echo "<td><a href='alumnos_editar.php?xid_per=$xid_per'>Editar</a> <a href='alumnos_grabar.php?xid_per=$xid_per'>Eliminar</a></td>";
+                                echo "<td><a href='alumnos_editar.php?xid_per=$xid_per'><img src='imagenes/editar_usuario.png'></a> <a href='alumnos_grabar.php?xid_per=$xid_per'><img src='imagenes/eliminar_usuario.png'></a></td>";
                             echo "</tr>";
                         } 
                         ?>
