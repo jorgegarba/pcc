@@ -40,7 +40,7 @@
                     <button class="navbar-toggler hidden-sm-up pull-sm-right" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                         &#9776;
                     </button>
-                    <a class="navbar-brand" href="index.html">Tecsup</a>
+                    <a class="navbar-brand" href="index.php">Tecsup</a>
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-nav top-nav navbar-right pull-xs-right">
@@ -167,7 +167,7 @@
                             <a href="javascript:;" data-toggle="collapse" data-target="#Operaciones"><i class="fa fa-fw fa-arrows-v"></i> Operaciones <i class="fa fa-fw fa-caret-down"></i></a>
                             <ul id="Operaciones" class="list-group collapse">
                                 <li class="list-group-item">
-                                    <a href="alumnos.php">Matriculas</a>
+                                    <a href="matriculas.php">Matriculas</a>
                                 </li>
                                 <li class="list-group-item">
                                     <a href="javascript:;">Dropdown Item</a>
