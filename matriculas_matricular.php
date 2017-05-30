@@ -6,7 +6,10 @@ require_once("header.php");
 
 $xid_per = leerParam("xid_per","");
 $objPersonaDatos = new PersonaDatos();
+$objAreaDatos = new AreaDatos();
 $persona = $objPersonaDatos->getPersonaById($xid_per);
+$areas = $objAreaDatos->getAreas();
+
 ?>
  <div class="container-fluid">
 
@@ -34,14 +37,12 @@ $persona = $objPersonaDatos->getPersonaById($xid_per);
                 
 
                 <fieldset class="form-group">
-                        <label>Elija Carrera</label>
-                        <select class="form-control" name="id_tipo_per">
+                        <label>Elija Area</label>
+                        <select class="form-control" name="id_area">
                             <?php
-                                while($fila=mysqli_fetch_array($res)){
-                                    $xid_tipo_per = $fila["id_tipo_per"];
-                                    $xdesc_tipo_per = $fila["desc_tipo_per"];
-                                    echo "<option value='$xid_tipo_per'>$xdesc_tipo_per</option>";
-                                } 
+                            foreach ($areas as $area) {
+                                echo "<option value='$area->id_area'>$area->nom_area</option>";
+                            }
                              ?>
                         </select>
                 </fieldset>
