@@ -64,3 +64,35 @@ function buscarSemCarr(){
 	ajax.send("id_carr="+id_carr)
 
 }
+function matricular(){
+	resul = document.getElementById('mensaje');
+	
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	if(dd<10) {
+	    dd='0'+dd
+	} 
+	if(mm<10) {
+	    mm='0'+mm
+	} 
+
+	today = yyyy+'-'+mm+'-'+dd;
+
+	id_per=document.frmMatricula.id_per.value;
+	id_sem_carr=document.frmMatricula.id_sem_carr.value;
+	fec_mat=today;
+	
+	ajax=nuevoAjax();
+	ajax.open("POST", "matriculas_grabar.php",true);
+	ajax.onreadystatechange=function() {
+		if (ajax.readyState==4) {
+			resul.innerHTML = ajax.responseText
+		}
+	}
+	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	ajax.send("id_per="+id_per+"&id_sem_carr="+id_sem_carr+"&fec_mat="+fec_mat)
+
+
+}

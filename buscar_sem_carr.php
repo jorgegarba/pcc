@@ -1,6 +1,7 @@
 <?php
 require('funciones.php');
 require_once("Datos/SemestreCarreraDatos.php");
+
 require_once("Modelos/Semestre.php");
 $id_carr=leerParam("id_carr","");
 $objSemestreCarreraDatos = new SemestreCarreraDatos();

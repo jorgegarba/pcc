@@ -1,5 +1,6 @@
 <?php
 require_once("Datos/PersonaDatos.php");
+
 require_once("Datos/AreaDatos.php");
 require_once("funciones.php");
 require_once("header.php");
@@ -14,6 +15,10 @@ $areas = $objAreaDatos->getAreas();
  <div class="container-fluid">
 <script type="text/javascript" src="js/funciones.js"></script>
     <!-- Page Heading -->
+
+    <div id="mensaje">
+    </div>
+    
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
@@ -25,7 +30,8 @@ $areas = $objAreaDatos->getAreas();
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
-            <form role="form" method="POST" action="alumnos_grabar.php" name="frmMatricula">
+            <form role="form" name="frmMatricula" onsubmit="matricular(); return false;">
+            <input hidden="YES" name="id_per" id="id_per" value=<?php echo $xid_per; ?>>
                 <fieldset class="form-group">
                     <label for="nom_per">Nombres Completos:</label>
                     <input class="form-control" required="required" name="nom_per" id="nom_per" value="<?php echo $persona->nom_per." ".$persona->ape_per; ?>">
