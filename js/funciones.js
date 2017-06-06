@@ -32,3 +32,19 @@ function buscarDato(){
 	ajax.send("busqueda="+bus)
 
 }
+function buscarCarrera(){
+	resul = document.getElementById('resultado');
+	
+	id_area=document.frmMatricula.id_area.value;
+	
+	ajax=nuevoAjax();
+	ajax.open("POST", "buscar_carreras.php",true);
+	ajax.onreadystatechange=function() {
+		if (ajax.readyState==4) {
+			resul.innerHTML = ajax.responseText
+		}
+	}
+	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	ajax.send("id_area="+id_area)
+
+}

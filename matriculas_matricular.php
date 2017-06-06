@@ -12,7 +12,7 @@ $areas = $objAreaDatos->getAreas();
 
 ?>
  <div class="container-fluid">
-
+<script type="text/javascript" src="js/funciones.js"></script>
     <!-- Page Heading -->
     <div class="row">
         <div class="col-lg-12">
@@ -25,7 +25,7 @@ $areas = $objAreaDatos->getAreas();
     <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
-            <form role="form" method="POST" action="alumnos_grabar.php">
+            <form role="form" method="POST" action="alumnos_grabar.php" name="frmMatricula">
                 <fieldset class="form-group">
                     <label for="nom_per">Nombres Completos:</label>
                     <input class="form-control" required="required" name="nom_per" id="nom_per" value="<?php echo $persona->nom_per." ".$persona->ape_per; ?>">
@@ -38,13 +38,16 @@ $areas = $objAreaDatos->getAreas();
 
                 <fieldset class="form-group">
                         <label>Elija Area</label>
-                        <select class="form-control" name="id_area">
+                        <select class="form-control" name="id_area" onchange="buscarCarrera(); return false;">
                             <?php
                             foreach ($areas as $area) {
                                 echo "<option value='$area->id_area'>$area->nom_area</option>";
                             }
                              ?>
                         </select>
+                </fieldset>
+                <fieldset class="form-group">
+                        <div id="resultado"></div>
                 </fieldset>
 
                 <button type="submit" class="btn btn-secondary">Submit Button</button>
