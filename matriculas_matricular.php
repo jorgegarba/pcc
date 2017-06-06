@@ -37,17 +37,21 @@ $areas = $objAreaDatos->getAreas();
                 
 
                 <fieldset class="form-group">
-                        <label>Elija Area</label>
-                        <select class="form-control" name="id_area" onchange="buscarCarrera(); return false;">
-                            <?php
-                            foreach ($areas as $area) {
-                                echo "<option value='$area->id_area'>$area->nom_area</option>";
-                            }
-                             ?>
-                        </select>
+                    <label>Elija Area</label>
+                    <select class="form-control" name="id_area" onchange="buscarCarrera(); return false;">
+                        <?php
+                        foreach ($areas as $area) {
+                            echo "<option value='$area->id_area'>$area->nom_area</option>";
+                        }
+                         ?>
+                    </select>
                 </fieldset>
                 <fieldset class="form-group">
-                        <div id="resultado"></div>
+                    <label>Elija Carrera</label>
+                        <select class="form-control" name="id_carr" id="id_carr">
+                            
+                        </select>
+
                 </fieldset>
 
                 <button type="submit" class="btn btn-secondary">Submit Button</button>

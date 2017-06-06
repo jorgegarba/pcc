@@ -33,7 +33,7 @@ function buscarDato(){
 
 }
 function buscarCarrera(){
-	resul = document.getElementById('resultado');
+	resul = document.getElementById('id_carr');
 	
 	id_area=document.frmMatricula.id_area.value;
 	
