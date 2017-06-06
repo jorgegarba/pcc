@@ -42,7 +42,7 @@
                     </button>
                     <a class="navbar-brand" href="index.html">Tecsup</a>
                 </div>
-                                        
+
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-toggleable-sm navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav list-group">
@@ -50,39 +50,64 @@
                             <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                         </li>
                         
-                </div>
-                <!-- /.navbar-collapse -->
-            </nav>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
 
-            <div id="page-wrapper">
+                <div id="page-wrapper">
 
-                <div class="container-fluid">
+                    <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            
+                        <!-- Page Heading -->
+                        <div class="row">
+                            <div class="col-xl-6 text-xs-center">
+                                
 
-                            
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                <div class="row">
+                    <div class="col-xl-3 text-xs-center">
+                        <!-- LADO IZQUIERDO -->
+                    </div>
+                    <div class="col-xl-6 text-xs-center">
+                        <div class="card card-default">
+                            <div class="card-block">
+                                <form role="form">
+
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon">Login:</span>
+                                        <input type="text" class="form-control" placeholder="Username">
+                                    </div>
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon">Password:</span>
+                                        <input type="text" class="form-control" placeholder="Username">
+                                    </div>
+
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <!-- /.row -->
+                    <div class="col-xl-3 text-xs-center">
+                        <!-- LADO DERECHO -->
+                    </div>
+                </div>
+
+                    </div>
+                    <!-- /.container-fluid -->
 
                 </div>
-                <!-- /.container-fluid -->
+                <!-- /#page-wrapper -->
 
             </div>
-            <!-- /#page-wrapper -->
+            <!-- /#wrapper -->
 
-        </div>
-        <!-- /#wrapper -->
+            <!-- jQuery -->
+            <script src="js/jquery.js"></script>
 
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
+            <!-- Bootstrap Core JavaScript -->
+            <script src="js/bootstrap.min.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+        </body>
 
-    </body>
-
-    </html>
+        </html>
