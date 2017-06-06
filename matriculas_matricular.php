@@ -48,10 +48,17 @@ $areas = $objAreaDatos->getAreas();
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Elija Carrera</label>
-                        <select class="form-control" name="id_carr" id="id_carr">
+                        <select class="form-control" name="id_carr" id="id_carr" onchange="buscarSemCarr(); return false;">
                             
                         </select>
 
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Elija el Semestre</label>
+                        <select class="form-control" name="id_sem_carr" id="id_sem_carr">
+                            
+                        </select>
                 </fieldset>
 
                 <button type="submit" class="btn btn-secondary">Submit Button</button>

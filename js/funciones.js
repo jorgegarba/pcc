@@ -48,3 +48,19 @@ function buscarCarrera(){
 	ajax.send("id_area="+id_area)
 
 }
+function buscarSemCarr(){
+	resul = document.getElementById('id_sem_carr');
+	
+	id_carr=document.frmMatricula.id_carr.value;
+	
+	ajax=nuevoAjax();
+	ajax.open("POST", "buscar_sem_carr.php",true);
+	ajax.onreadystatechange=function() {
+		if (ajax.readyState==4) {
+			resul.innerHTML = ajax.responseText
+		}
+	}
+	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	ajax.send("id_carr="+id_carr)
+
+}
