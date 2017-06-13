@@ -1,4 +1,4 @@
-<?php require_once("header.php"); ?>
+<?php require_once("header_alumnos.php"); ?>
  <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -6,7 +6,7 @@
         <div class="col-lg-12">
             <h1 class="page-header">
                 Bienvenida
-                <small>Tecsup - admin</small>
+                <small>Tecsup - alumnos</small>
             </h1>
             <ol class="breadcrumb">
                 <li>

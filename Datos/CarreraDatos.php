@@ -19,5 +19,18 @@ class CarreraDatos{
 		}
 		return $carreras;
 	}
+
+	function getCarreraById($id_carr){
+		$xc = conectar();
+		$sql = "SELECT * FROM carrera where id_carr='$id_carr'";
+		$res = mysqli_query($xc,$sql);
+		$fila = mysqli_fetch_array($res);
+		$objCarrera = new Carrera();
+		$objCarrera->id_carr = $fila["id_carr"];
+		$objCarrera->nom_carr = $fila["nom_carr"];
+		$objCarrera->id_area = $fila["id_area"];
+		desconectar($xc);
+		return $objCarrera;
+	}
 }
  ?>

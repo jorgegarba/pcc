@@ -146,7 +146,7 @@
                             </li>
                             <li class="divider"></li>
                             <li class="dropdown-item">
-                                <a href="cerrar_sesion.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                                <a href="javascript:;"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                             </li>
                         </ul>
                     </li>
@@ -156,25 +156,13 @@
                     <ul class="nav navbar-nav side-nav list-group">
                         
                         <li class="list-group-item">
-                            <a href="javascript:;" data-toggle="collapse" data-target="#Mantenimientos"><i class="fa fa-fw fa-arrows-v"></i> Mantenimientos <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul id="Mantenimientos" class="list-group collapse">
+                            <a href="javascript:;" data-toggle="collapse" data-target="#Cursos"><i class="fa fa-fw fa-arrows-v"></i> Mis Cursos <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="Cursos" class="list-group collapse">
                                 <li class="list-group-item">
-                                    <a href="alumnos.php">Alumnos</a>
+                                    <a href="alumnos.php">Algoritmos</a>
                                 </li>
                                 <li class="list-group-item">
-                                    <a href="javascript:;">Dropdown Item</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a href="javascript:;" data-toggle="collapse" data-target="#Operaciones"><i class="fa fa-fw fa-arrows-v"></i> Operaciones <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul id="Operaciones" class="list-group collapse">
-                                <li class="list-group-item">
-                                    <a href="matriculas.php">Matriculas</a>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="javascript:;">Dropdown Item</a>
+                                    <a href="javascript:;">Programación Orienta a Objetos</a>
                                 </li>
                             </ul>
                         </li>

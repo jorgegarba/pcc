@@ -2,6 +2,9 @@
 
 require_once("Modelos/SemestreCarrera.php");
 require_once("Modelos/Semestre.php");
+require_once("Modelos/Carrera.php");
+require_once("Datos/SemestreDatos.php");
+require_once("Datos/CarreraDatos.php");
 require_once("funciones.php");
 class SemestreCarreraDatos{
 	function getSemestresCarrerasByCarreraId($id_carr){
@@ -48,6 +51,31 @@ class SemestreCarreraDatos{
 			array_push($semestresCarreras, $sem_carr_tmp);
 		}
 		return $semestresCarreras;
+	}
+
+	function getSemestreBySemestreCarreraId($id_sem_carr){
+		$xc = conectar();
+		$sql = "SELECT * FROM semestrecarrera WHERE id_sem_carr='$id_sem_carr'";
+		$res = mysqli_query($xc,$sql);
+		$fila = mysqli_fetch_array($res);
+		$id_sem = $fila[1];
+
+		$objSemestreDatos = new SemestreDatos();
+		$objSemestre = new Semestre();
+		$objSemestre = $objSemestreDatos->getSemestreById($id_sem);
+		return $objSemestre;
+	}
+	function getCarreraBySemestreCarreraId($id_sem_carr){
+		$xc = conectar();
+		$sql = "SELECT * FROM semestrecarrera WHERE id_sem_carr='$id_sem_carr'";
+		$res = mysqli_query($xc,$sql);
+		$fila = mysqli_fetch_array($res);
+		$id_carr = $fila[2];
+
+		$objCarreraDatos = new CarreraDatos();
+		$objCarrera = new Carrera();
+		$objCarrera = $objCarreraDatos->getCarreraById($id_carr);
+		return $objCarrera;
 	}
 
 }
