@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php session_start(); ?>
 <head>
 
     <meta charset="utf-8">
@@ -55,7 +55,7 @@
                                                 <img class="media-object" src="http://placehold.it/50x50" alt="">
                                             </span>
                                             <div class="media-body">
-                                                <h5 class="media-heading"><strong>John Smith</strong>
+                                                <h5 class="media-heading"><strong><?php echo $_SESSION['nom_per']; ?></strong>
                                                 </h5>
                                                 <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                                                 <p>Lorem ipsum dolor sit amet, consectetur...</p>
@@ -129,7 +129,7 @@
                         <!-- </div> -->
                     </li>
                     <li class="dropdown nav-item">
-                        <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                        <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION["nom_per"]." ".$_SESSION["ape_per"]; ?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item">
                                 <a href="javascript:;"><i class="fa fa-fw fa-user"></i> Profile</a>

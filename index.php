@@ -72,17 +72,19 @@
                     </div>
                     <div class="col-xl-6 text-xs-center">
                         <div class="card card-default">
+                        <h1>Iniciar Sesión</h1>
                             <div class="card-block">
-                                <form role="form">
+                                <form role="form" method="POST" action="validar.php">
 
                                     <div class="form-group input-group">
                                         <span class="input-group-addon">Login:</span>
-                                        <input type="text" class="form-control" placeholder="Username">
+                                        <input type="text" class="form-control" placeholder="Login" name="log_per">
                                     </div>
                                     <div class="form-group input-group">
                                         <span class="input-group-addon">Password:</span>
-                                        <input type="text" class="form-control" placeholder="Username">
+                                        <input type="password" class="form-control" placeholder="Password" name="pass_per">
                                     </div>
+                                    <button type="submit" class="btn btn-secondary">Inciar Sesión</button>
 
                                 </form>
                             </div>

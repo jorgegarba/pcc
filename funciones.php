@@ -8,7 +8,7 @@
      return $default;
   }
   function conectar() {
-     $xc = mysqli_connect("localhost","root","root","pcc");
+     $xc = mysqli_connect("localhost","root","","pcc");
      return $xc;
   }
   function desconectar($xc) {
