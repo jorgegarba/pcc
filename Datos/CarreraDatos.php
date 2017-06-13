@@ -1,6 +1,8 @@
 <?php 
 
 require_once("Modelos/Carrera.php");
+require_once("Modelos/Area.php");
+require_once("Datos/AreaDatos.php");
 require_once("funciones.php");
 class CarreraDatos{
 	function getCarrerasByAreaId($id_area){
@@ -28,7 +30,8 @@ class CarreraDatos{
 		$objCarrera = new Carrera();
 		$objCarrera->id_carr = $fila["id_carr"];
 		$objCarrera->nom_carr = $fila["nom_carr"];
-		$objCarrera->id_area = $fila["id_area"];
+		$objAreaDatos = new AreaDatos();
+		$objCarrera->id_area = $objAreaDatos->getAreaById($fila["id_area"]);
 		desconectar($xc);
 		return $objCarrera;
 	}

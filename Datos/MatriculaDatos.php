@@ -18,6 +18,49 @@ class MatriculaDatos{
 		mysqli_query($xc,$sql);
 		desconectar($xc);
 	}
+	function getMatriculaCompletaByMatriculaId($id_mat){
+		$objMatricula = new Matricula();
+		$objMatriculaDatos = new MatriculaDatos();
+		$objMatricula = $objMatriculaDatos->getMatriculaById($id_mat);
+		//obteniendo persona
+		$objPersonaDatos = new PersonaDatos();
+		$objPersona = new Persona();
+		$objPersona = $objPersonaDatos->getPersonaById($objMatricula->id_per);
+		//fin obteniendo persona
+		//obteniendo semestre y Carrera
+		$objSemestreCarreraDatos = new SemestreCarreraDatos();
+		
+		$objSemestre = new Semestre();
+		$objCarrera = new Carrera();
+
+		$objSemestre = $objSemestreCarreraDatos->getSemestreBySemestreCarreraId($objMatricula->id_sem_carr);
+		$objCarrera = $objSemestreCarreraDatos->getCarreraBySemestreCarreraId($objMatricula->id_sem_carr);
+		//fin obteniendo semestre y Carrera
+
+		$objSemestreCarrera = new SemestreCarrera();
+		$objSemestreCarrera->id_sem = $objSemestre;
+		$objSemestreCarrera->id_carr = $objCarrera;
+
+		$objMatricula->id_per = $objPersona;
+		$objMatricula->id_sem_carr = $objSemestreCarrera;
+
+		return $objMatricula;
+
+	}
+	function getMatriculaById($id_mat){
+		$xc = conectar();
+		$sql = "SELECT * FROM matricula where id_mat='$id_mat'";
+		$res = mysqli_query($xc,$sql);
+		desconectar($xc);
+		$fila = mysqli_fetch_array($res);
+		$objMatricula = new Matricula();
+		$objMatricula->id_mat=$fila["id_mat"];
+		$objMatricula->id_per=$fila["id_per"];
+		$objMatricula->id_sem_carr=$fila["id_sem_carr"];
+		$objMatricula->fec_mat=$fila["fec_mat"];
+		return $objMatricula;
+	}
+
 	function getMatriculasCompleto(){
 		$xc = conectar();
 		$sql = "SELECT  m.id_mat, p.id_per, sc.id_sem_carr, m.fec_mat
@@ -36,6 +79,7 @@ class MatriculaDatos{
 
 			$objPersonaDatos = new PersonaDatos();
 			$objPersona = new Persona();
+
 			$objPersona = $objPersonaDatos->getPersonaById($fila["id_per"]);
 
 			$id_sem_carr = $fila["id_sem_carr"];
@@ -59,5 +103,6 @@ class MatriculaDatos{
 		}
 		return $arrayMatriculasCompleto;
 	}
+
 }
  ?>
