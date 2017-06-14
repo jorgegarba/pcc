@@ -38,6 +38,7 @@ class MatriculaDatos{
 		//fin obteniendo semestre y Carrera
 
 		$objSemestreCarrera = new SemestreCarrera();
+		$objSemestreCarrera->id_sem_carr = $objMatricula->id_sem_carr;
 		$objSemestreCarrera->id_sem = $objSemestre;
 		$objSemestreCarrera->id_carr = $objCarrera;
 

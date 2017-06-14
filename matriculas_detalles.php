@@ -1,12 +1,15 @@
 <?php require_once("header.php");
 
 require_once("Datos/MatriculaDatos.php");
+require_once("Datos/CursoDatos.php");
+require_once("Modelos/Curso.php");
 require_once("Modelos/Persona.php");
 require_once("Modelos/Carrera.php");
 require_once("Modelos/Semestre.php");
 require_once("Modelos/Area.php");
 require_once("Modelos/SemestreCarrera.php");
 $objMatriculaDatos = new MatriculaDatos();
+$objCursoDatos = new CursoDatos();
 $id_mat = leerParam("id_mat","");
 
 $objMatricula = new Matricula();
@@ -26,6 +29,9 @@ $objCarrera = $objSemestreCarrera->id_carr;
 
 $objArea = new Area();
 $objArea = $objCarrera->id_area;
+
+$arrayCursos = $objCursoDatos->getCursosBySemCarrId($objSemestreCarrera->id_sem_carr);
+
 
 ?>
  <div class="container-fluid">
@@ -89,35 +95,22 @@ $objArea = $objCarrera->id_area;
 
     <div class="row">
         <div class="col-lg-12">
-            <h2>Matriculas Registradas</h2>
+            <h2>Cursos por Jalar</h2>
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Código de Matricula</th>
-                            <th>Carrera</th>
-                            <th>Semestre</th>
-                            <th>Alumno</th>
-                            <th>Fecha Matricula</th>
-                            <th>Acciones</th>
+                            <th>Código Curso</th>
+                            <th>Nombre de Curso</th>
+                            <th>Docente del Curso</th>
                         </tr>
                     </thead>
                     <tbody>
                        <?php
-                       foreach ($arrayMatriculas as $Matricula) {
-                            echo " <tr>";
-                            echo "<td> $Matricula->id_mat </td>";
-
-                            $objSemestreCarrera = $Matricula->id_sem_carr;
-                            $objSemestre = $objSemestreCarrera->id_sem;
-                            $objCarrera = $objSemestreCarrera->id_carr;
-                            echo "<td> $objCarrera->nom_carr </td>";
-                            echo "<td> $objSemestre->nro_sem </td>";
-                            $objPersona = $Matricula->id_per;
-                            $nomPersona = $objPersona->nom_per." ".$objPersona->ape_per;
-                            echo "<td> $nomPersona</td>";
-                            echo "<td> $Matricula->fec_mat </td>";
-                            echo "<td><a href=matriculas_detalles.php?id_mat=$Matricula->id_mat>Ver Detalles</a></td>";
+                       foreach ($arrayCursos as $objCurso) {
+                            echo "<tr>";
+                            echo "<td> $objCurso->id_curso</td>";
+                            echo "<td> $objCurso->nom_curso</td>";
                             echo "</tr>";
                         }
 
