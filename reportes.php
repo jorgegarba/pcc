@@ -37,8 +37,8 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <input type='radio' name='tipo_doc' value='pdf' checked> PDF
-                                    <input type='radio' name='tipo_doc' value='excel' checked> EXCEL
+                                    <input type='radio' name='tipo_rep' value='pdf' checked> PDF
+                                    <input type='radio' name='tipo_rep' value='excel' checked> EXCEL
                                 </td>
                                 <td colspan="2">
                                     <input class="btn btn-primary" type="submit" value="Generar Reporte">            
