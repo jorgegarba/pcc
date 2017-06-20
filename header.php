@@ -178,6 +178,16 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <li class="list-group-item">
+                            <a href="javascript:;" data-toggle="collapse" data-target="#Reportes"><i class="fa fa-fw fa-arrows-v"></i> Reportes <i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="Reportes" class="list-group collapse">
+                                <li class="list-group-item">
+                                    <a href="reportes.php">Reportes Generales</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
